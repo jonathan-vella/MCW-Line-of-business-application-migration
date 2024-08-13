@@ -101,4 +101,11 @@ Duration: 60 minutes
 
     ![Listing of expected resources from the landing zone deployment.](images/BeforeTheHOL/landingzone.png "Landing zone screenshot") 
 
+
+### Task 4: Modify Virtual Switch assignment
+
+1. Connect to the SmartHotelHost virtual machine via Azure Bastion.
+2. Launch Hyper-V Manager
+
+
 You should follow all steps provided *before* performing the Hands-on lab.
