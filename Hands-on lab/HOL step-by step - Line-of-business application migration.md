@@ -201,7 +201,7 @@ In this task, you will deploy and configure the Azure Migrate appliance in the o
     >
     > The Hyper-V environment has a NAT network using the IP address space 192.168.0.0/16. The internal NAT switch used by the SmartHotel application uses the subnet 192.168.0.0/24, and each VM in the application has been assigned a static IP address from this subnet.
     >
-    > The Azure Migrate Appliance will be connected to the same subnet. Since there is no DHCP scope for the 192.168.0.0/24 you have to configure the virtual machine with an IP address of 192.168.0.10/24; the gateway IP address is 192.168.0.1 and DNS server address is 1.1.1.1
+    > The Azure Migrate Appliance will be connected to the same subnet. Since you created a new DHCP scope for the 192.168.0.0/24 thee virtual machine will be assigned an IP address of 192.168.0.10. This IP address will be used to communicate with the Hyper-V host, guest VMs, and to upload data to Azure.
 
 15. Review the summary page, then select **Finish** to create the Azure Migrate appliance VM.
 
@@ -305,9 +305,9 @@ In this task, you will configure the Azure Migrate appliance and use it to compl
     > - You can't remove a specific host from a cluster. You can only remove the entire cluster.
     > - You can add a cluster, even if there are issues with specific hosts in the cluster.
 
-19. In **Step 3: Provide server credentials to perform software inventory and agentless dependency analysis.**, disable the slider to the off position.
+19. In **Step 3: Provide server credentials to perform software inventory and agentless dependency analysis.**, make sure that the slider is in the **on** position.
 
-    ![The slider is set to the off position beneath the Step 3: Provide server credentials to perform software inventory and agentless dependency analysis header.](images/Exercise1/toggle_software_inventory_off.png "Skip software inventory and agentless dependency analysis")
+    ![The slider is set to the on position beneath the Step 3: Perform software inventory and agentless dependency analysis header.](images/Exercise1/azure-migrate-agentless.png "Software inventory and agentless dependency analysis")
 
 20. Select **Start discovery** to kick off VM discovery from the successfully validated hosts/clusters.
 
