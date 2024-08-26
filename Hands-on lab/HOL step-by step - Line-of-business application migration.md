@@ -30,12 +30,13 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/legal/intellec
     - [Task 5: Configure dependency visualization](#task-5-configure-dependency-visualization)
     - [Task 6: Explore dependency visualization](#task-6-explore-dependency-visualization)
   - [Exercise 2: Migrate the Application Database](#exercise-2-migrate-the-application-database)
-    - [Task 1: Register the Microsoft.DataMigration resource provider](#task-1-register-the-microsoftdatamigration-resource-provider)
-    - [Task 2: Create the Database Migration Service](#task-2-create-the-database-migration-service)
-    - [Task 3: Assess the on-premises database using Data Migration Assistant](#task-3-assess-the-on-premises-database-using-data-migration-assistant)
-    - [Task 4: Create a DMS migration project](#task-4-create-a-dms-migration-project)
-    - [Task 5: Migrate the database schema](#task-5-migrate-the-database-schema)
-    - [Task 6: Migrate the on-premises data](#task-6-migrate-the-on-premises-data)
+    - Task 1: Register the Microsoft.DataMigration resource provider
+    - Task 2: Install and configure Azure Data Studio
+    - Task 3: Assess the application database using Azure Data Studio
+    - Task 4: Collect performance data from your source SQL Server instance
+    - Task 5: Get a recommendation of the Azure SQL Database SKU that will work best for your workload
+    - Task 6: Create an instance of Azure Database Migration Service
+    - Task 7: Start your migration and monitor progress to completion
   - [Exercise 3: Migrate the application and web tiers using Azure Migrate: Server Migration](#exercise-3-migrate-the-application-and-web-tiers-using-azure-migrate-server-migration)
     - [Task 1: Create a Storage Account](#task-1-create-a-storage-account)
     - [Task 2: Create a Private Endpoint](#task-2-create-a-private-endpoint)
@@ -472,13 +473,13 @@ In this exercise you will migrate the application database from the on-premises 
 
 > **Note**: You can use Azure Database Migration Service via the Azure SQL Migration extension for Azure Data Studio, or the Azure portal, to migrate databases from an on-premises instance of SQL Server to Azure SQL Database (offline). 
 
-Task 1: Register the Microsoft.DataMigration resource provider
-Task 2: Install and configure Azure Data Studio
-Task 3: Assess the application database using Azure Data Studio
-Task 4: Collect performance data from your source SQL Server instance
-Task 5: Get a recommendation of the Azure SQL Database SKU that will work best for your workload
-Task 6: Create an instance of Azure Database Migration Service
-Task 7: Start your migration and monitor progress to completion
+- Task 1: Register the Microsoft.DataMigration resource provider
+- Task 2: Install and configure Azure Data Studio
+- Task 3: Assess the application database using Azure Data Studio
+- Task 4: Collect performance data from your source SQL Server instance
+- Task 5: Get a recommendation of the Azure SQL Database SKU that will work best for your workload
+- Task 6: Create an instance of Azure Database Migration Service
+- Task 7: Start your migration and monitor progress to completion
 
 ### Task 1: Register the Microsoft.DataMigration resource provider
 
@@ -499,9 +500,9 @@ You can check the status by running:
     Get-AzResourceProvider -ProviderNamespace Microsoft.DataMigration | Select-Object ProviderNamespace, RegistrationState, ResourceTypes
     ```
 
-### Task 2: Install and configure Azure Data Studio
+### Task 2-7
 
-In this task you will install and configure Azure Data Studio on the SmartHotelHost virtual machine. Azure Data Studio is a cross-platform database tool for data professionals using the Microsoft family of on-premises and cloud data platforms on Windows, macOS, and Linux.
+The guidance for this exercise is not provided here. You must follow the guidance in this [link](https://learn.microsoft.com/en-us/data-migration/sql-server/database/database-migration-service?toc=%2Fazure%2Fdms%2Ftoc.json&tabs=azure-data-studio#tabpanel_1_azure-data-studio). The steps are not provided here.
 
 #### Exercise summary
 
@@ -519,7 +520,7 @@ Having migrated the virtual machines, you will reconfigure the application tier 
 
 In this task you will create a new Azure Storage Account that will be used by Azure Migrate: Server Migration for storage of your virtual machine data during migration.
 
-> **Note:** This lab focuses on the technical tools required for workload migration. In a real-world scenario, more consideration should go into the long-term plan prior to migrating assets. The landing zone required to host VMs should also include considerations for network traffic, access control, resource organization, and governance. For example, the CAF Migration Blueprint and CAF Foundation Blueprint can be used to deploy a pre-defined landing zone, and demonstrate the potential of an Infrastructure as Code (IaC) approach to infrastructure resource management. For more information, see [Azure Landing Zones](https://docs.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/) and [Cloud Adoption Framework Azure Migration landing zone Blueprint sample](https://docs.microsoft.com/azure/governance/blueprints/samples/caf-migrate-landing-zone/).
+> **Note:** This lab focuses on the technical tools required for workload migration. In a real-world scenario, more consideration should go into the long-term plan prior to migrating assets. The landing zone required to host VMs should also include considerations for network traffic, access control, resource organization, and governance.
 
 1. In the Azure portal's left navigation, select **+ Create a resource**, then search for and select **Storage account**, followed by **Create**.
 
