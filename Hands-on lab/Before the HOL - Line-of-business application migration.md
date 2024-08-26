@@ -89,7 +89,7 @@ Duration: 60 minutes
 
 3. Open a browser tab and navigate to **http://\<SmartHotelHostIP-Address\>**. You should see the SmartHotel application, which is running on nested VMs within Hyper-V on the SmartHotelHost. (The application doesn't do much: you can refresh the page to see the list of guests or select 'CheckIn' or 'CheckOut' to toggle their status.)
 
-    ![Browser screenshot showing the SmartHotel application.](images/BeforeTheHOL/smarthotel.png "SmartHotel applicaion")
+    ![Browser screenshot showing the SmartHotel application.](images/BeforeTheHOL/smarthotel.png "SmartHotel application")
 
     > **Note:** If the SmartHotel application is not shown, wait 10 minutes and try again. It takes **at least 1 hour** from the start of template deployment. You can also check the CPU, network and disk activity levels for the SmartHotelHost VM in the Azure portal, to see if the provisioning is still active.
 
@@ -106,6 +106,9 @@ Duration: 60 minutes
 
 1. Connect to the SmartHotelHost virtual machine via Azure Bastion.
 2. Launch Hyper-V Manager
+3. Configure all virtual machines to use the **AzureMigrateSwitch** virtual switch. This will allow the VMs to communicate with the internet and the landing zone.
+
+    ![Hyper-V Manager showing the ExternalSwitch virtual switch.](images/BeforeTheHOL/azure-migrate-switch.png "AzureMigrateSwitch virtual switch")
 
 
 You should follow all steps provided *before* performing the Hands-on lab.
