@@ -499,7 +499,6 @@ You can check the status by running:
     Get-AzResourceProvider -ProviderNamespace Microsoft.DataMigration | Select-Object ProviderNamespace, RegistrationState, ResourceTypes
     ```
 
-
 ### Task 2: Install and configure Azure Data Studio
 
 In this task you will install and configure Azure Data Studio on the SmartHotelHost virtual machine. Azure Data Studio is a cross-platform database tool for data professionals using the Microsoft family of on-premises and cloud data platforms on Windows, macOS, and Linux.
