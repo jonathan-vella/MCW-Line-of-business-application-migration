@@ -101,4 +101,26 @@ Duration: 60 minutes
 
     ![Listing of expected resources from the landing zone deployment.](images/BeforeTheHOL/landingzone.png "Landing zone screenshot") 
 
+### Task 4: DHCP Scope configuration
+
+1. The SmartHotelHost guest VMs are configured with a static IP address. To allow the Azure Migrate Appliance guest VM to communicate with the Azure resources, you need to configure a DHCP scope on the SmartHotelHost VM.
+2. Launch the DHCP Manager on the SmartHotelHost VM.
+3. Right-click on the IPv4 node and select **New Scope**.
+4. Click **Next** on the welcome screen.
+5. Enter the following details:
+    - **Name**: AzureMigrate
+    - **Description**: Azure Migrate DHCP Scope
+    - **IP Address Range**:
+        - **Start IP Address**: 192.168.0.10
+        - **End IP Address**: 192.168.0.19
+    - **Subnet Mask**: 255.255.255.0
+    - **Default Gateway**: 192.168.0.1
+    - **DNS Servers**: 1.1.1.1
+6. Click **Next** and then **Finish** to create the scope.
+7. Right-click on the new scope and select **Activate**.
+8. Close the DHCP Manager.
+
+## Summary
+In this section, you deployed the on-premises environment and landing zone. The on-premises environment is a nested Hyper-V host with a SmartHotel application running on nested VMs. The landing zone is a set of resources that will be used to migrate the SmartHotel application to Azure. The next step is to assess and migrate the SmartHotel application to Azure.
+
 You should follow all steps provided *before* performing the Hands-on lab.
