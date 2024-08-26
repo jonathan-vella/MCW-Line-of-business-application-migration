@@ -468,43 +468,44 @@ In this exercise, you used Azure Migrate to assess the on-premises environment. 
 
 Duration: 60 minutes
 
-In this exercise you will migrate the application database from the on-premises Hyper-V virtual machine to a new database hosted in the Azure SQL Database service. You will use Azure Data Studio and the Azure Database Migration Service (from within Azure Data Studio) to complete the assessment and migration.
+In this exercise you will migrate the application database from the on-premises Hyper-V virtual machine to a new database hosted in the Azure SQL Database service. You will use Azure Data Studio and the Azure Database Migration Service (from within Azure Data Studio) to complete the assessment and migration. In this exercise, you will assess and migrate the SmartHotel.Registration database from an on-premises instance of SQL Server to an instance of Azure SQL Database, by using Azure Data Studio. This lab uses offline migration mode, which considers an acceptable downtime during the migration process.
 
-You can use Azure Database Migration Service via the Azure SQL Migration extension for Azure Data Studio, or the Azure portal, to migrate databases from an on-premises instance of SQL Server to Azure SQL Database (offline). In this exersize, you will assess and migrate the sample AdventureWorks2022 database from an on-premises instance of SQL Server to an instance of Azure SQL Database, by using Database Migration Service. This tutorial uses offline migration mode, which considers an acceptable downtime during the migration process.
+> **Note**: You can use Azure Database Migration Service via the Azure SQL Migration extension for Azure Data Studio, or the Azure portal, to migrate databases from an on-premises instance of SQL Server to Azure SQL Database (offline). 
 
-In this tutorial, you learn how to:
+Task 1: Register the Microsoft.DataMigration resource provider
+Task 2: Install and configure Azure Data Studio
+Task 3: Assess the application database using Azure Data Studio
+Task 4: Collect performance data from your source SQL Server instance
+Task 5: Get a recommendation of the Azure SQL Database SKU that will work best for your workload
+Task 6: Create an instance of Azure Database Migration Service
+Task 7: Start your migration and monitor progress to completion
 
-Open the Migrate to Azure SQL wizard in Azure Data Studio
-Run an assessment of your source SQL Server databases
-Collect performance data from your source SQL Server instance
-Get a recommendation of the Azure SQL Database SKU that will work best for your workload
-Create an instance of Azure Database Migration Service
-Start your migration and monitor progress to completion
+### Task 1: Register the Microsoft.DataMigration resource provider
 
-> **Note**: If you're using Database Migration Service for the first time, make sure that the Microsoft.DataMigration resource provider is registered in your subscription. You can register it by following the steps in the [Register the Microsoft.DataMigration resource provider](https://docs.microsoft.com/en-us/azure/dms/resource-provider-register) article or by following these steps:
+If you're using Database Migration Service for the first time, make sure that the Microsoft.DataMigration resource provider is registered in your subscription. You can register it by following the steps in the [Register the Microsoft.DataMigration resource provider](https://docs.microsoft.com/en-us/azure/dms/resource-provider-register) article or by following these steps:
 
-> 1. Open the Azure Cloud Shell by navigating to **<https://shell.azure.com>**. Log in using your Azure subscription credentials if prompted to do so, select a **PowerShell** session, and accept any prompts.
-> 2. Run the following command to register the **Microsoft.DataMigration** resource provider:
+1. Open the Azure Cloud Shell by navigating to **<https://shell.azure.com>**. Log in using your Azure subscription credentials if prompted to do so, select a **PowerShell** session, and accept any prompts.
+2. Run the following command to register the **Microsoft.DataMigration** resource provider:
 
     ```PowerShell
     Register-AzResourceProvider -ProviderNamespace Microsoft.DataMigration
     ```
 
-> **Note**: It may take several minutes for the resource provider to register. You can proceed to the next task without waiting for the registration to complete. You will not use the resource provider until task 3.
->
-> You can check the status by running:
+It may take several minutes for the resource provider to register. You can proceed to the next task without waiting for the registration to complete. You will not use the resource provider until task 6.
 
-> ```PowerShell
-> Get-AzResourceProvider -ProviderNamespace Microsoft.DataMigration | Select-Object ProviderNamespace, RegistrationState, ResourceTypes
-> ```
+You can check the status by running:
 
-### Task 1: Install and configure Azure Data Studio
+    ```PowerShell
+    Get-AzResourceProvider -ProviderNamespace Microsoft.DataMigration | Select-Object ProviderNamespace, RegistrationState, ResourceTypes
+    ```
+
+### Task 2: Install and configure Azure Data Studio
 
 In this task you will install and configure Azure Data Studio on the SmartHotelHost virtual machine. Azure Data Studio is a cross-platform database tool for data professionals using the Microsoft family of on-premises and cloud data platforms on Windows, macOS, and Linux.
 
 #### Exercise summary
 
-In this exercise you migrated the application database from on-premises to Azure SQL Database. The Microsoft Data Migration Assistant was used for migration assessment, and the Azure Database Migration Service was used for schema migration and data migration.
+In this exercise you assessed and migrated the application database from on-premises to Azure SQL Database using Azure Data Studio andd the Azure Database Migration Service was used for schema migration and data migration in offline mode.
 
 ## Exercise 3: Migrate the application and web tiers using Azure Migrate: Server Migration
 
