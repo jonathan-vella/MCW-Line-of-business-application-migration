@@ -29,6 +29,9 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/legal/intellec
     - [Task 4: Create a migration assessment](#task-4-create-a-migration-assessment)
     - [Task 5: Configure dependency visualization](#task-5-configure-dependency-visualization)
     - [Task 6: Explore dependency visualization](#task-6-explore-dependency-visualization)
+    - Task 7: Create a Business Case
+    - Task 8: Create an assessment for SQL Server
+    - Task 9: Create an assessment for Web Servers targeting both App Service and AKS
   - [Exercise 2: Migrate the Application Database](#exercise-2-migrate-the-application-database)
     - Task 1: Register the Microsoft.DataMigration resource provider
     - Task 2: Install and configure Azure Data Studio
@@ -108,7 +111,7 @@ Refer to the [Before the HOL - Line-of-business application migration](./Before%
 
 ## Exercise 1: Discover and assess the on-premises environment
 
-Duration: 60 minutes
+Duration: 120 minutes
 
 In this exercise, you will use Azure Migrate: Server Assessment to assess the on-premises environment. This will include selecting Azure Migrate tools, deploying the Azure Migrate appliance into the on-premises environment, creating a migration assessment, and using the Azure Migrate dependency visualization.
 
@@ -448,6 +451,32 @@ In this task, you will configure the Azure Migrate dependency visualization feat
 To complete this task you must follow the guidance in this [link](https://learn.microsoft.com/en-us/azure/migrate/how-to-create-group-machine-dependencies-agentless). The steps are not provided here.
 
 >**Note**: You need to generate some traffic on the SmartHotel application so the dependency visualization has some data to work with. Browse to the public IP address of the SmartHotelHost, and spend a few minutes refreshing the page and checking guests in and out.
+
+### Task 7: Create a Business Case
+
+The Business case capability of Azure Migrate helps you build a business proposal to understand how Azure can bring the most value to your business. It highlights:
+
+- On-premises vs Azure total cost of ownership.
+- Year on year cashflow analysis.
+- Resource utilization based insights to identify servers and workloads that are ideal for cloud.
+- Quick wins for migration and modernization including end of support Windows OS and SQL versions.
+- Long term cost savings by moving from a capital expenditure model to an Operating expenditure model, by paying for only what you use.
+- Other key features:
+
+    - Helps remove guess work in your cost planning process and adds data insights driven calculations.
+    - It can be generated in just a few clicks after you have performed discovery using the Azure Migrate appliance.
+    - The feature is automatically enabled for existing Azure Migrate projects.
+
+In this task, you will create a business case for the migration of the SmartHotel application to Azure. This business case will help you understand the costs associated with the migration, and the potential savings that can be achieved by migrating to Azure. Guidance on how to create a business case can be found [here](https://learn.microsoft.com/en-us/azure/migrate/concepts-business-case-calculatione). The steps are not provided here.
+
+### Task 8: Create an assessment for SQL Server
+
+In this task, you will create an assessment for SQL Server. This assessment will help you understand the readiness of your SQL Server instances for migration to SQL Server in Azure VMs, Azure SQL Database Managed Instance, and Azure SQL Database. Guidance on how to create an assessment for SQL Server can be found [here](https://learn.microsoft.com/en-us/azure/migrate/how-to-create-azure-sql-assessment). The steps are not provided here.
+
+### Task 9: Create an assessment for Web Servers targeting both App Service and AKS
+
+In this task, you will create an assessment for Web Servers. This assessment will help you understand the readiness of your Web Servers for migration to Azure App Service and Azure Kubernetes Service (AKS). Guidance on how to create an assessment for Web Servers can be found [here](https://learn.microsoft.com/en-us/azure/migrate/concepts-azure-webapps-assessment-calculation). The steps are not provided here.
+
 
 #### Task summary
 
