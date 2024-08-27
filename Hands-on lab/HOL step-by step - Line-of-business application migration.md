@@ -14,47 +14,6 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/legal/intellec
 
 **Contents** 
 
-<!-- TOC -->
-
-- [Line-of-business application migration hands-on lab step-by-step](#line-of-business-application-migration-hands-on-lab-step-by-step)
-  - [Abstract and learning objectives](#abstract-and-learning-objectives)
-  - [Overview](#overview)
-  - [Solution architecture](#solution-architecture)
-  - [Requirements](#requirements)
-  - [Before the hands-on lab](#before-the-hands-on-lab)
-  - [Exercise 1: Discover and assess the on-premises environment](#exercise-1-discover-and-assess-the-on-premises-environment)
-    - [Task 1: Create the Azure Migrate project and add assessment and migration tools](#task-1-create-the-azure-migrate-project-and-add-assessment-and-migration-tools)
-    - [Task 2: Deploy the Azure Migrate appliance](#task-2-deploy-the-azure-migrate-appliance)
-    - [Task 3: Configure the Azure Migrate appliance](#task-3-configure-the-azure-migrate-appliance)
-    - [Task 4: Create a migration assessment](#task-4-create-a-migration-assessment)
-    - [Task 5: Configure dependency visualization](#task-5-configure-dependency-visualization)
-    - [Task 6: Explore dependency visualization](#task-6-explore-dependency-visualization)
-    - Task 7: Create a Business Case
-    - Task 8: Create an assessment for SQL Server
-    - Task 9: Create an assessment for Web Servers targeting both App Service and AKS
-  - [Exercise 2: Migrate the Application Database](#exercise-2-migrate-the-application-database)
-    - Task 1: Register the Microsoft.DataMigration resource provider
-    - Task 2: Install and configure Azure Data Studio
-    - Task 3: Assess the application database using Azure Data Studio
-    - Task 4: Collect performance data from your source SQL Server instance
-    - Task 5: Get a recommendation of the Azure SQL Database SKU that will work best for your workload
-    - Task 6: Create an instance of Azure Database Migration Service
-    - Task 7: Start your migration and monitor progress to completion
-  - [Exercise 3: Migrate the application and web tiers using Azure Migrate: Server Migration](#exercise-3-migrate-the-application-and-web-tiers-using-azure-migrate-server-migration)
-    - [Task 1: Create a Storage Account](#task-1-create-a-storage-account)
-    - [Task 2: Create a Private Endpoint](#task-2-create-a-private-endpoint)
-    - [Task 3: Register the Hyper-V Host with Azure Migrate: Server Migration](#task-3-register-the-hyper-v-host-with-azure-migrate-server-migration)
-    - [Task 4: Enable Replication from Hyper-V to Azure Migrate](#task-4-enable-replication-from-hyper-v-to-azure-migrate)
-    - [Task 5: Configure static internal IP addresses for each VM](#task-5-configure-static-internal-ip-addresses-for-each-vm)
-    - [Task 6: Server migration](#task-6-server-migration)
-    - [Task 7: Configure the database connection](#task-7-configure-the-database-connection)
-    - [Task 8: Configure the public IP address and test the SmartHotel application](#task-8-configure-the-public-ip-address-and-test-the-smarthotel-application)
-    - [Task 9: Post-migration steps](#task-9-post-migration-steps)
-  - [After the hands-on lab](#after-the-hands-on-lab)
-    - [Task 1: Clean up resources](#task-1-clean-up-resources)
-
-<!-- /TOC -->
-
 # Line-of-business application migration hands-on lab step-by-step
 
 ## Abstract and learning objectives
@@ -475,18 +434,7 @@ In this task, you will create an assessment for SQL Server. This assessment will
 
 ### Task 9: Create an assessment for Web Servers targeting both App Service and AKS
 
-In this task, you will create an assessment for Web Servers. This assessment will help you understand the readiness of your Web Servers for migration to Azure App Service and Azure Kubernetes Service (AKS). Guidance on how to create an assessment for Web Servers can be found [here](https://learn.microsoft.com/en-us/azure/migrate/concepts-azure-webapps-assessment-calculation). The steps are not provided here.
-
-
-#### Task summary
-
-In this task you configured the Azure Migrate dependency visualization feature, by using the agentless option.
-
-### Task 6: Explore dependency visualization
-
-In this task, you will explore the dependency visualization feature of Azure Migrate. This feature uses data gathered by the dependency agent you installed in Task 5. To complete this task you must follow the guidance in this [link](https://learn.microsoft.com/en-us/azure/migrate/how-to-create-group-machine-dependencies-agentless). The steps are not provided here.
-
-#### Task summary
+In this task, you will create an assessment for Web Servers. This assessment will help you understand the readiness of your Web Servers for migration to Azure App Service and Azure Kubernetes Service (AKS). Guidance on how to create an assessment for Web Servers can be found [here](https://learn.microsoft.com/en-us/azure/migrate/concepts-azure-webapps-assessment-calculation)
 
 In this task you explored the Azure Migrate dependency visualization feature.
 
