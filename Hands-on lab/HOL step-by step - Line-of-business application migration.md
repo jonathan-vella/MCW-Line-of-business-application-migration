@@ -494,7 +494,7 @@ In this exercise you will migrate the application database from the on-premises 
 
 ### Task 1: Register the Microsoft.DataMigration resource provider
 
-If you're using Database Migration Service for the first time, make sure that the Microsoft.DataMigration resource provider is registered in your subscription. You can register it by following the steps in the [Register the Microsoft.DataMigration resource provider](https://docs.microsoft.com/en-us/azure/dms/resource-provider-register) article or by following these steps:
+If you're using Database Migration Service for the first time, make sure that the Microsoft.DataMigration resource provider is registered in your subscription. You can register it from the Azure Portal (Microsoft.DataMigration resource provider) or by following these steps:
 
 1. Open the Azure Cloud Shell by navigating to **<https://shell.azure.com>**. Log in using your Azure subscription credentials if prompted to do so, select a **PowerShell** session, and accept any prompts.
 2. Run the following command to register the **Microsoft.DataMigration** resource provider:
