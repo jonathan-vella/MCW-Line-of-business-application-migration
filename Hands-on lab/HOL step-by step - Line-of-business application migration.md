@@ -460,7 +460,7 @@ The Business case capability of Azure Migrate helps you build a business proposa
     - It can be generated in just a few clicks after you have performed discovery using the Azure Migrate appliance.
     - The feature is automatically enabled for existing Azure Migrate projects.
 
-In this task, you will create a business case for the migration of the SmartHotel application to Azure. This business case will help you understand the costs associated with the migration, and the potential savings that can be achieved by migrating to Azure. Guidance on how to create a business case can be found [here](https://learn.microsoft.com/en-us/azure/migrate/concepts-business-case-calculatione). The steps are not provided here.
+In this task, you will create a business case for the migration of the SmartHotel application to Azure. This business case will help you understand the costs associated with the migration, and the potential savings that can be achieved by migrating to Azure. Guidance on how to create a business case can be found [here](https://learn.microsoft.com/en-us/azure/migrate/concepts-business-case-calculation). The steps are not provided here.
 
 ### Task 7: Create an assessment for SQL Server
 
