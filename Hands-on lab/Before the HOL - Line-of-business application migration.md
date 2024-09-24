@@ -32,6 +32,8 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
     - [Task 1: Deploy the on-premises environment and landing zone](#task-1-deploy-the-on-premises-environment-and-landing-zone)
     - [Task 2: Verify the on-premises environment](#task-2-verify-the-on-premises-environment)
     - [Task 3: Verify the landing zone environment](#task-3-verify-the-landing-zone-environment)
+    - [Task 4: DHCP Scope configuration](#task-4-dhcp-scope-configuration)
+  - [Summary](#summary)
 
 <!-- /TOC -->
 
@@ -115,7 +117,7 @@ Duration: 60 minutes
         - **End IP Address**: 192.168.0.19
     - **Subnet Mask**: 255.255.255.0
     - **Default Gateway**: 192.168.0.1
-    - **DNS Servers**: 1.1.1.1
+    - **DNS Servers**: 168.63.129.16
 6. Click **Next** and then **Finish** to create the scope.
 7. Right-click on the new scope and select **Activate**.
 8. Close the DHCP Manager.
